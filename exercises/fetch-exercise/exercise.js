@@ -17,25 +17,6 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-// async function getNumberFact(number) {
-//   try {
-//     const response = await fetch(`http://numbersapi.com/${number}`);
-//     const body = await response.text();
-//     console.log(body);
-//     return body;
-//   } catch (error) {}
-// }
-
-// getNumberFact(42);
-
-// button.addEventListener("click", async () => {
-//   const input = document.getElementById("input").value;
-//   const span = document.getElementById("response");
-//   const response = await getNumberFact(input);
-//   console.log(response);
-//   span.innerText = response;
-// });
-
 fetch("https://holy-snow-6805.fly.dev/api/greetings")
   .then(function getResponse(response) {
     return response.json();

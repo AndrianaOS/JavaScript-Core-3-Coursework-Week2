@@ -25,7 +25,6 @@ async function showDogImage() {
   const listItem = document.createElement("li");
   photoGallery.appendChild(listItem);
   listItem.style.listStyle = "none";
-  listItem.innerHTML = "";
 
   listItem.appendChild(dogImage);
 }

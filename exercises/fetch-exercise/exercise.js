@@ -17,10 +17,47 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch("*** Write the API address here ***")
-  .then(function (response) {
-    return response.text();
+// async function getNumberFact(number) {
+//   try {
+//     const response = await fetch(`http://numbersapi.com/${number}`);
+//     const body = await response.text();
+//     console.log(body);
+//     return body;
+//   } catch (error) {}
+// }
+
+// getNumberFact(42);
+
+// button.addEventListener("click", async () => {
+//   const input = document.getElementById("input").value;
+//   const span = document.getElementById("response");
+//   const response = await getNumberFact(input);
+//   console.log(response);
+//   span.innerText = response;
+// });
+
+fetch("https://holy-snow-6805.fly.dev/api/greetings")
+  .then(function getResponse(response) {
+    return response.json();
   })
-  .then(function (greeting) {
+  .then(function getGreeting(greeting) {
     // Write the code to display the greeting text here
+    const greetingEl = document.querySelector("#greeting-text");
+
+    greetingEl.innerText = `${greeting.language}: ${greeting.hello}`;
+
+    // greetingEl.innerText = `${Object.keys(
+    //   greeting
+    // ).toString()}: ${Object.values(greeting)}`;
+    // console.log(greetingEl);
+
+    // for (key in greeting) {
+    //   greetingEl.innerText = `${key}: ${greeting[key]}`;
+    // }
+    // console.log(greetingEl);
+
+    // for (let [key, value] of Object.entries(greeting)) {
+    //   // greetingEl.innerText = `${key}: ${value}`;
+    //   console.log(`${key}: ${value}`);
+    // }
   });

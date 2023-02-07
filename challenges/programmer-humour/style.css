@@ -1,0 +1,21 @@
+#heading {
+  text-align: center;
+  margin: 2em;
+}
+
+#submit {
+  padding: 1em;
+  font-size: 1.5em;
+  border: none;
+  background: white;
+}
+
+#myImage {
+  width: 60em;
+  margin: 2em;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}

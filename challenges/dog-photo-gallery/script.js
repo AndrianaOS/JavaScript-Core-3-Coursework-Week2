@@ -16,7 +16,7 @@ buttonEl.addEventListener("click", showDogImage);
 
 async function showDogImage() {
   const dogImage = document.createElement("img");
-  imageObject = await getDogImage();
+  const imageObject = await getDogImage();
   dogImage.src = imageObject.message;
   dogImage.style.width = "20em";
   dogImage.style.height = "20em";

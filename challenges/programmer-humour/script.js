@@ -16,7 +16,7 @@ const myImages = document.querySelector("#myImage");
 buttonEl.addEventListener("click", showImages);
 
 async function showImages() {
-  imageObject = await fetchImage();
+  const imageObject = await fetchImage();
   console.log(imageObject);
   myImages.src = imageObject.img;
   myImages.alt = imageObject.alt;

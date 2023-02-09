@@ -25,20 +25,5 @@ fetch("https://holy-snow-6805.fly.dev/api/greetings")
     // Write the code to display the greeting text here
     const greetingEl = document.querySelector("#greeting-text");
 
-    greetingEl.innerText = `${greeting.language}: ${greeting.hello}`;
-
-    // greetingEl.innerText = `${Object.keys(
-    //   greeting
-    // ).toString()}: ${Object.values(greeting)}`;
-    // console.log(greetingEl);
-
-    // for (key in greeting) {
-    //   greetingEl.innerText = `${key}: ${greeting[key]}`;
-    // }
-    // console.log(greetingEl);
-
-    // for (let [key, value] of Object.entries(greeting)) {
-    //   // greetingEl.innerText = `${key}: ${value}`;
-    //   console.log(`${key}: ${value}`);
-    // }
+    greetingEl.innerText = `Language : ${greeting.language} \n Hello: ${greeting.hello}`;
   });
